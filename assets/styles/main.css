@@ -1,0 +1,140 @@
+/** @format */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* Variables */
+:root {
+	/* ===== COLORS =====  */
+	--body-color: #f6f5ff;
+	--primary-color: #0d6efd;
+	--secondary-color: #fff;
+	--text-color: #404040;
+	--card-color: rgba(255, 255, 255, 0.4);
+
+	/* ====== TRANSITIONS ======  */
+	--tran-02: all 0.2s ease;
+	--tran-03: all 0.3s ease;
+	--tran-04: all 0.4s ease;
+	--tran-05: all 0.5s ease;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+	background-color: var(--body-color);
+}
+
+/* Sidebar */
+#sidebar-nav {
+	width: 285px;
+	background-color: var(--secondary-color);
+	transition: var(--tran-05);
+	z-index: 1;
+}
+
+.menu-icon {
+	margin: 0 10px;
+}
+
+.logo {
+	margin-left: 18px;
+}
+
+.toggle {
+	right: -16px;
+	transition: var(--tran-05);
+}
+
+.toggle-icon {
+	transition: var(--tran-05);
+}
+
+#brand-text,
+.text-sidebar {
+	white-space: nowrap;
+	animation: fadeIn 2s;
+}
+
+/* Text Transition */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.sidebar li a {
+	color: var(--text-color);
+}
+
+/* Selected Menu */
+.sidebar li.active {
+	background-color: var(--primary-color);
+}
+
+.sidebar li.active a {
+	color: var(--secondary-color);
+}
+
+/* Minimize Sidebar */
+#sidebar-nav.minimize {
+	width: 102px;
+}
+
+#sidebar-nav.minimize #brand-text,
+#sidebar-nav.minimize .text-sidebar {
+	display: none;
+}
+
+#sidebar-nav.minimize .toggle {
+	right: -16px;
+}
+
+#sidebar-nav.minimize .toggle-icon {
+	transform: rotate(180deg);
+}
+
+/* Topbar */
+#topbar {
+	min-height: 100px;
+	background-color: var(--secondary-color);
+}
+
+#profile-img {
+	width: 46px;
+	height: 46px;
+	object-fit: cover;
+}
+
+/* Main Content */
+.card {
+	background: var(--card-color);
+}
+
+/* Media Query */
+@media (max-width: 991px) {
+	#topbar {
+		min-height: 20px;
+		max-height: 100%;
+	}
+
+	.sidebar li.active {
+		background-color: inherit;
+	}
+
+	.sidebar li.active a {
+		color: var(--primary-color);
+	}
+
+	#sidebar-nav,
+	#sidebar-nav.minimize {
+		width: 100%;
+		min-height: 40px;
+		max-height: 40px;
+		position: fixed;
+		bottom: 0;
+	}
+}
