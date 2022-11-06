@@ -137,8 +137,8 @@
 
 
                 <!-- Toggle Dropdown -->
-                <button class="btn dropdown-toggle d-flex align-items-center gap-2" type="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn  d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     <img id="profile-img"
                         src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
                         class="rounded-circle bg-light shadow-sm" alt="Avatar" />
@@ -184,11 +184,11 @@
                 <!-- Container One -->
                 <div class="col-xxl-8 d-flex flex-column p-2 gap-4">
                     <!-- Info -->
-                    <div class="col d-flex flex-column flex-sm-row gap-3">
+                    <div class="col d-flex flex-column flex-sm-row gap-3 align-items-center">
                         <div class="card rounded-4 shadow border-0 col d-flex p-3 gap-4">
                             <span class="fs-5">Employee</span>
                             <span class="display-5 fw-bold">100</span>
-                            <span>Go to Employee </span>
+                            <span c>Go to Employee </span>
                         </div>
                         <div class="card rounded-4 shadow border-0 col d-flex p-3 gap-4">
                             <span class="fs-5">Payroll</span>
@@ -202,62 +202,129 @@
                         </div>
                     </div>
 
-                    <!-- Top Employee -->
-                    <div class="card rounded-4 shadow border-0 row gap-3">
-                        <div class="d-flex flex-column p-3">
-                            <span class="fs-2 mb-4">Top Employee</span>
-                            <div class="user d-flex flex-column gap-3 mb-2">
-                                <div class="d-flex align-items-center gap-3">
-                                    <img id="profile-img"
-                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
-                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
-                                    <span class="fs-6">Joe Gomez</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-3">
-                                    <img id="profile-img"
-                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
-                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
-                                    <span class="fs-6">Joe Gomez</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-3">
-                                    <img id="profile-img"
-                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
-                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
-                                    <span class="fs-6">Joe Gomez</span>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Bar Chart -->
+                    <div class="card rounded-4 shadow border-0 gap-3 p-4">
+                        <canvas id="myChart" height="400"></canvas>
                     </div>
                 </div>
 
                 <!-- Container Two -->
-                <div class="">
-                    <div class="d-flex flex-column p-3">
-                        <span class="fs-2 mb-4">Top Employee</span>
-                        <div class="user d-flex flex-column gap-3 mb-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <img id="profile-img"
-                                    src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
-                                    class="rounded-circle bg-light shadow-sm" alt="Avatar" />
-                                <span class="fs-6">Joe Gomez</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-3">
-                                <img id="profile-img"
-                                    src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
-                                    class="rounded-circle bg-light shadow-sm" alt="Avatar" />
-                                <span class="fs-6">Joe Gomez</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-3">
-                                <img id="profile-img"
-                                    src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
-                                    class="rounded-circle bg-light shadow-sm" alt="Avatar" />
-                                <span class="fs-6">Joe Gomez</span>
-                            </div>
-                        </div>
+                <div class="d-flex col flex-column flex-md-row flex-xxl-column p-2 gap-4">
+                    <!-- Verification -->
+                    <div class="card col rounded-4 shadow border-0 d-flex flex-column p-3">
+                        <span class="fs-4 p-3">Verification</span>
+                        <table class="table table-borderless">
+                            <tbody class="d-flex flex-column gap-2">
+                                <tr class="d-flex col align-items-center px-3 ">
+                                    <td class="col-2 d-flex justify-content-center">
+                                        <img id="profile-img"
+                                            src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                            class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    </td>
+                                    <td class="col-6 d-flex justify-content-center">Joe Gomez</td>
+                                    <td class="col-4 d-flex justify-content-center gap-1">
+                                        <button type="button" class="btn btn-primary rounded-4" title="accept">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px"
+                                                viewBox="0 0 48 48" fill="white">
+                                                <path d="M18.9 36.75 6.65 24.5l3.3-3.3 8.95 9L38 11.1l3.3 3.25Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-danger rounded-4" title="decline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px"
+                                                viewBox="0 0 48 48" fill="white">
+                                                <path
+                                                    d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="d-flex col align-items-center px-3 ">
+                                    <td class="col-2 d-flex justify-content-center">
+                                        <img id="profile-img"
+                                            src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                            class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    </td>
+                                    <td class="col-6 d-flex justify-content-center">Joe Gomez</td>
+                                    <td class="col-4 d-flex justify-content-center gap-1">
+                                        <button type="button" class="btn btn-primary rounded-4" title="accept">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px"
+                                                viewBox="0 0 48 48" fill="white">
+                                                <path d="M18.9 36.75 6.65 24.5l3.3-3.3 8.95 9L38 11.1l3.3 3.25Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-danger rounded-4" title="decline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px"
+                                                viewBox="0 0 48 48" fill="white">
+                                                <path
+                                                    d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="d-flex col align-items-center px-3 ">
+                                    <td class="col-2 d-flex justify-content-center">
+                                        <img id="profile-img"
+                                            src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                            class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    </td>
+                                    <td class="col-6 d-flex justify-content-center">Joe Gomez</td>
+                                    <td class="col-4 d-flex justify-content-center gap-1">
+                                        <button type="button" class="btn btn-primary rounded-4" title="accept">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px"
+                                                viewBox="0 0 48 48" fill="white">
+                                                <path d="M18.9 36.75 6.65 24.5l3.3-3.3 8.95 9L38 11.1l3.3 3.25Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-danger rounded-4" title="decline">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px"
+                                                viewBox="0 0 48 48" fill="white">
+                                                <path
+                                                    d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a class="text-decoration-none fs-6 p-3 mt-auto">Go to Verification</a>
+                    </div>
+
+                    <!-- Top Employee -->
+                    <div class="card rounded-4 shadow border-0 d-flex flex-column p-3">
+                        <span class=" fs-4 p-3">Top Employee</span>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr class="d-flex col align-items-center px-3 ">
+                                    <td class="col-2 d-flex justify-content-center">
+                                        <img id="profile-img"
+                                            src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                            class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    </td>
+                                    <td class="col-6 d-flex justify-content-center">Joe Gomez</td>
+                                </tr>
+                                <tr class="d-flex col align-items-center px-3 ">
+                                    <td class="col-2 d-flex justify-content-center">
+                                        <img id="profile-img"
+                                            src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                            class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    </td>
+                                    <td class="col-6 d-flex justify-content-center">Joe Gomez</td>
+                                </tr>
+                                <tr class="d-flex col align-items-center px-3 ">
+                                    <td class="col-2 d-flex justify-content-center">
+                                        <img id="profile-img"
+                                            src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                            class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    </td>
+                                    <td class="col-6 d-flex justify-content-center">Joe Gomez</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Bootstrap JS -->
@@ -265,7 +332,10 @@
 
     <!-- JQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script src="../../assets/scripts/main.js"></script>
+    <script src="../../assets/scripts/chart.js"></script>
 </body>
 
 </html>
