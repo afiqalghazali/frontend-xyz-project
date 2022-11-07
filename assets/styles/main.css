@@ -10,7 +10,6 @@
 	--primary-color: #0d6efd;
 	--secondary-color: #fff;
 	--text-color: #404040;
-	--card-color: rgba(255, 255, 255, 0.4);
 
 	/* ====== TRANSITIONS ======  */
 	--tran-02: all 0.2s ease;
@@ -23,6 +22,19 @@ body {
 	font-family: "Poppins", sans-serif;
 	min-height: 100vh;
 	background-color: var(--body-color);
+}
+
+.sidebar li a,
+#brand-text,
+#topbar,
+.content {
+	color: var(--text-color);
+}
+
+body.dark {
+	--body-color: #18191a;
+	--secondary-color: #242526;
+	--text-color: #ccc;
 }
 
 /* Sidebar */
@@ -66,10 +78,6 @@ body {
 	}
 }
 
-.sidebar li a {
-	color: var(--text-color);
-}
-
 /* Selected Menu */
 .sidebar li.active {
 	background-color: var(--primary-color);
@@ -77,6 +85,10 @@ body {
 
 .sidebar li.active a {
 	color: var(--secondary-color);
+}
+
+body.dark .sidebar li.active a {
+	color: var(--text-color);
 }
 
 /* Minimize Sidebar */
@@ -110,14 +122,53 @@ body {
 }
 
 /* Main Content */
-.card {
-	background: var(--card-color);
+.card,
+.container {
+	background: var(--secondary-color);
+}
+
+.card:hover {
+	background-color: var(--primary-color);
+	transition: var(--tran-05);
+}
+
+.card:hover span,
+.card:hover a {
+	color: var(--secondary-color);
+}
+
+.name {
+	color: var(--text-color);
+}
+
+body.dark .card,
+body.dark .container {
+	background: var(--secondary-color);
+}
+
+body.dark .card:hover {
+	background: var(--primary-color);
+}
+
+body.dark .card:hover span,
+body.dark .card:hover a {
+	color: var(--text-color);
+}
+
+.bg-verification {
+	background-color: var(--body-color);
+}
+
+#profile-img-container {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
 }
 
 /* Media Query */
 @media (max-width: 991px) {
 	#topbar {
-		min-height: 10px;
+		min-height: 60px;
 	}
 
 	.sidebar li.active {
@@ -135,5 +186,10 @@ body {
 		max-height: 40px;
 		position: fixed;
 		bottom: 0;
+	}
+
+	#profile-img {
+		width: 30px;
+		height: 30px;
 	}
 }

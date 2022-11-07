@@ -9,7 +9,40 @@ $(".sidebar ul li").on("click", function () {
 /* Toggle Sidebar */
 $(".toggle").on("click", function () {
 	$(".sidebar").toggleClass("minimize");
+	$(".toggle").toggleClass("minimize-on");
+	if (sessionStorage.getItem("minimized")) {
+		sessionStorage.removeItem("minimized");
+	} else {
+		sessionStorage.setItem("minimized", true);
+	}
 });
+
+/* Toggle Dark Mode */
+
+$("#dark-mode").on("click", function () {
+	$("body").toggleClass("dark");
+	$("#dark-mode").toggleClass("dark-on");
+	if (sessionStorage.getItem("darkmode")) {
+		sessionStorage.removeItem("darkmode");
+	} else {
+		sessionStorage.setItem("darkmode", true);
+	}
+});
+
+onload = function () {
+	if (sessionStorage.getItem("darkmode")) {
+		sessionStorage.getItem("darkmode");
+		$("body").addClass("dark");
+		$("#dark-mode").addClass("dark-on");
+		sessionStorage.setItem("darkmode", true);
+	}
+	if (sessionStorage.getItem("minimized")) {
+		sessionStorage.getItem("minimized");
+		$(".sidebar").addClass("minimize");
+		$(".toggle").addClass("minimize-on");
+		sessionStorage.setItem("minimized", true);
+	}
+};
 
 /* Greetings */
 var today = new Date();
