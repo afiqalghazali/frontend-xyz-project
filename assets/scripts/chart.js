@@ -24,29 +24,30 @@ const myChart = new Chart(ctx, {
 	},
 	options: {
 		responsive: true,
+		layout: {
+			padding: 40,
+		},
+		scales: {
+			x: {
+				title: {
+					display: true,
+					text: "Month",
+				},
+			},
+			y: {
+				title: {
+					display: true,
+					text: "Total",
+				},
+				ticks: {
+					// forces step size to be 25 units
+					stepSize: 25,
+				},
+			},
+		},
 		plugins: {
 			legend: {
 				position: "right",
-			},
-			scales: {
-				x: {
-					title: {
-						display: true,
-						text: "Month",
-					},
-				},
-				y: {
-					title: {
-						display: true,
-						text: "Value",
-					},
-					min: 0,
-					max: 100,
-					ticks: {
-						// forces step size to be 50 units
-						stepSize: 20,
-					},
-				},
 			},
 		},
 	},
