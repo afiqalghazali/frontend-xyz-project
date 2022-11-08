@@ -22,6 +22,7 @@ body {
 	font-family: "Poppins", sans-serif;
 	min-height: 100vh;
 	background-color: var(--body-color);
+	transition: var(--tran-05);
 }
 
 .sidebar li a,
@@ -39,10 +40,14 @@ body.dark {
 
 /* Sidebar */
 #sidebar-nav {
-	width: 285px;
+	width: 102px;
 	background-color: var(--secondary-color);
 	transition: var(--tran-05);
 	z-index: 1;
+}
+#sidebar-nav #brand-text,
+#sidebar-nav .text-sidebar {
+	display: none;
 }
 
 .menu-icon {
@@ -92,27 +97,24 @@ body.dark .sidebar li.active a {
 }
 
 /* Minimize Sidebar */
-#sidebar-nav.minimize {
-	width: 102px;
+#sidebar-nav.maxsimize {
+	width: 285px;
 }
 
-#sidebar-nav.minimize #brand-text,
-#sidebar-nav.minimize .text-sidebar {
-	display: none;
+#sidebar-nav.maxsimize #brand-text,
+#sidebar-nav.maxsimize .text-sidebar {
+	display: flex;
 }
 
-#sidebar-nav.minimize .toggle {
-	right: -16px;
-}
-
-#sidebar-nav.minimize .toggle-icon {
-	transform: rotate(180deg);
+#sidebar-nav.maxsimize .toggle-icon {
+	transform: rotate(-180deg);
 }
 
 /* Topbar */
 #topbar {
 	min-height: 100px;
 	background-color: var(--secondary-color);
+	transition: var(--tran-05);
 }
 
 #profile-img {
@@ -181,7 +183,7 @@ body.dark .card:hover a {
 	}
 
 	#sidebar-nav,
-	#sidebar-nav.minimize {
+	#sidebar-nav.maxsimize {
 		width: 100%;
 		min-height: 40px;
 		max-height: 40px;

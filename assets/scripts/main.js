@@ -8,12 +8,12 @@ $(".sidebar ul li").on("click", function () {
 
 /* Toggle Sidebar */
 $(".toggle").on("click", function () {
-	$(".sidebar").toggleClass("minimize");
-	$(".toggle").toggleClass("minimize-on");
-	if (sessionStorage.getItem("minimized")) {
-		sessionStorage.removeItem("minimized");
+	$(".sidebar").toggleClass("maxsimize");
+	$(".toggle").toggleClass("maxsimize-on");
+	if (sessionStorage.getItem("maxsimized")) {
+		sessionStorage.removeItem("maxsimized");
 	} else {
-		sessionStorage.setItem("minimized", true);
+		sessionStorage.setItem("maxsimized", true);
 	}
 });
 
@@ -32,14 +32,14 @@ onload = function () {
 	if (sessionStorage.getItem("darkmode")) {
 		sessionStorage.getItem("darkmode");
 		$("body").addClass("dark");
-		$("#dark-mode").bootstrapToggle("on");
+		$("#dark-mode").prop("checked", true).change();
 		sessionStorage.setItem("darkmode", true);
 	}
-	if (sessionStorage.getItem("minimized")) {
-		sessionStorage.getItem("minimized");
-		$(".sidebar").addClass("minimize");
-		$(".toggle").addClass("minimize-on");
-		sessionStorage.setItem("minimized", true);
+	if (sessionStorage.getItem("maxsimized")) {
+		sessionStorage.getItem("maxsimized");
+		$(".sidebar").addClass("maxsimize");
+		$(".toggle").addClass("maxsimize-on");
+		sessionStorage.setItem("maxsimized", true);
 	}
 };
 
