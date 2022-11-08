@@ -175,7 +175,8 @@ body.dark .card:hover a {
 		background-color: inherit;
 	}
 
-	.sidebar li.active a {
+	.sidebar li.active a,
+	body.dark .sidebar li.active a {
 		color: var(--primary-color);
 	}
 
