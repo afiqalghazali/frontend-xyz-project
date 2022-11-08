@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <title>Log-in & Sig-in Form</title>
+    <title>XYZ Company</title>
     <link rel="stylesheet" href="assets/styles/login.css">
-    <script src=" https://kit.fontawesome.com/531b145c34.js" crossorigin="anonymous">
-    </script>
+    <!-- Google Material -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
 </head>
 
 
@@ -20,17 +20,23 @@
                 <form action="./php/login_aksi.php" method="post" class="sign-in-form">
                     <h2 class="title">Sign In</h2>
                     <div class="input-field">
-                        <!-- <i class="fas fa-user"></i>
+                        <!-- <i class="material-icons-round">&#xe7fd</i>
                         <input type="text" placeholder="Username" name="username"> -->
-                        <i class="fas fa-user"></i>
+                        <i class="material-icons-round">&#xe7fd</i>
                         <a href="sources/admin/admin-dashboard.html">Admin</a>
 
                     </div>
                     <div class="input-field">
-                        <!-- <i class="fas fa-lock"></i>
+                        <!-- <i class="material-icons-round">&#xe897</i>
                         <input type="password" placeholder="Password" name="password"> -->
-                        <i class="fas fa-user"></i>
+                        <i class="material-icons-round">&#xe897</i>
                         <a href="sources/employee/employee-dashboard.html">Employee</a>
+                    </div>
+                    <div class="input-field">
+                        <!-- <i class="material-icons-round">&#xe897</i>
+                                            <input type="password" placeholder="Password" name="password"> -->
+                        <i class="material-icons-round">&#xe897</i>
+                        <a href="sources/form.html">Form</a>
                     </div>
                     <!-- <input type=" submit" value="Login" class="btn solid"> -->
                 </form>
@@ -38,26 +44,18 @@
                 <form action="./php/signUp_aksi.php" method="post" class="sign-up-form">
                     <h2 class="title">Sign Up</h2>
                     <div class="input-field">
-                        <!-- <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" name="User"> -->
-                        <i class="fas fa-user"></i>
-                        <a href="sources/form.html">Form</a>
+                        <i class="material-icons-round">&#xe7fd</i>
+                        <input type="text" placeholder="Username" name="User">
                     </div>
                     <div class="input-field">
-                        <!-- <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Email" name="email"> -->
-                        <i class="fas fa-user"></i>
-                        <a href="sources/lo.html">LO</a>
+                        <i class="material-icons-round">&#xe0be</i>
+                        <input type="text" placeholder="Email" name="email">
                     </div>
                     <div class="input-field">
-                        <!-- <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" name="Pass"> -->
-                        <i class="fas fa-user"></i>
-                        <a href="sources/up.html">UP</a>
+                        <i class="material-icons-round">&#xe897</i>
+                        <input type="password" placeholder="Password" name="Pass">
                     </div>
-                    <!-- <input type="submit" value="Sign Up" class="btn solid"> -->
-                    <i class="fas fa-user"></i>
-                    <a href="sources/verifikasi.html">Verifikasi</a>
+                    <input type="submit" value="Sign Up" class="btn solid">
                 </form>
             </div>
         </div>
@@ -68,7 +66,6 @@
                     <p>Jika anda merupakan karyawan baru, maka silahkan sign-up untuk membuat akun.</p>
                     <button class="btn transparent" id="sign-up-btn">Sign Up</button>
                 </div>
-
                 <img src="assets/img/undraw_working_remotely_re_6b3a.svg" class="image" alt="">
             </div>
 
@@ -78,7 +75,6 @@
                     <p>Anda merupakan bagian dari kami, silahkan masuk terlebih dahulu.</p>
                     <button class="btn transparent" id="sign-in-btn">Sign in</button>
                 </div>
-
                 <img src="assets/img/undraw_feeling_proud_qne1.svg" class="image" alt="">
             </div>
         </div>

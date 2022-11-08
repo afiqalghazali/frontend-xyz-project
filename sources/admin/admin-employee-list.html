@@ -1,0 +1,228 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <!-- Google Material -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/styles/main.css">
+    <title>XYZ Company</title>
+</head>
+
+<!-- PHP Config -->
+
+
+<body class="d-flex">
+    <!-- Content -->
+    <div class="content col d-flex flex-column gap-3 mb-5">
+        <!-- Topbar -->
+        <nav id="topbar" class="navbar d-flex px-1 px-lg-4 shadow-sm">
+            <!-- Topbar Logo & Greetings -->
+            <div class="d-flex">
+                <!-- Topbar Logo Display md-xs -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="logo d-flex">
+                        <img src="../../assets/img/xyz_logo.svg" height="30px" width="30px" alt="">
+                    </div>
+                    <span id="brand-text" class="fs-4 fw-bold d-none d-sm-flex text">XYZ Company</span>
+                </div>
+            </div>
+
+            <!-- Topbar Profile -->
+            <div class="d-flex align-items-center gap-2">
+                <div class="dark-mode d-flex">
+                    <label class="material-icons-round pe-2" for="dark-mode">&#xe518</label>
+                    <div class="d-flex gap-5 form-check form-switch" for="dark-mode">
+                        <input class="form-check-input" type="checkbox" role="switch" title="toggle-dark"
+                            id="dark-mode">
+                    </div>
+                    <label class="material-icons-round" for="dark-mode">&#xef5e</label>
+
+                </div>
+                <div class="dropdown d-flex">
+                    <!-- Toggle Dropdown -->
+                    <button class="btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img id="profile-img"
+                            src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                            class="rounded-circle bg-light shadow-sm col-2" alt="Avatar" />
+                        <span class="d-none d-lg-flex col-10 flex-column align-items-start me-1 ">
+                            <span class="fs-6 fw-semibold text">Joe Gomez</span>
+                            <span class="fs-6 text-secondary">CEO</span>
+                        </span>
+                    </button>
+
+                    <!-- Dropdown Content -->
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item d-flex d-lg-none flex-column">
+                                <span class="fs-5">Joe Gomez</span>
+                                <span class="fs-5 fw-bold text-danger">CEO</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" dropdown-item active" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Help</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider d-block d-lg-none">
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-block d-lg-none" href="../../php/logoutController.php"
+                                onclick="return confirm('Apakah anda ingin logout')">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- Main Content -->
+        <div class="d-flex flex-column px-3">
+            <!-- Content Header -->
+            <div class="d-flex flex-column my-2 mx-0 mx-lg-4 px-1">
+                <div class="d-flex flex-column flex-lg-row col justify-content-between px-1 px-lg-2">
+                    <span class="fs-3 fw-bold">Employee List</span>
+                    <ol class="breadcrumb p-lg-2">
+                        <li class="breadcrumb-item"><a class="text-decoration-none" href="admin-dashboard.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item"><a class="text-decoration-none"
+                                href="admin-employee.html">Employee</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Employee List</li>
+                    </ol>
+                </div>
+                <div class="d-flex px-3">
+                    <a type="button" href="admin-employee.html"
+                        class="d-flex rounded-circle p-2 btn btn-primary align-items-center justify-content-center">
+                        <i class="material-icons-round">&#xe5c4</i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="d-flex row p-2 p-sm-3 px-lg-5 ">
+                <!-- Employee's List -->
+                <div class="container col rounded-4 shadow border-0 d-flex flex-column p-1 p-sm-3">
+                    <div class="d-flex align-items-center gap-3 p-3">
+                        <i class="material-icons-round">&#xe8b6</i>
+                        <input type="email" class="form-control" id="search" placeholder="Search">
+                    </div>
+                    <table class="table table-borderless">
+                        <tbody class="d-flex flex-column gap-2 px-3">
+                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                                <td class="col-8 col-sm-4 col-xxl d-flex gap-3 gap-lg-5 align-items-center">
+                                    <img id="profile-img"
+                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    <span class="text">Joe Gomez</span>
+                                </td>
+                                <td class="col d-none d-sm-flex justify-content-center text">Male</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">$1500</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">IT Cons</td>
+                                <td class="col d-flex justify-content-center gap-1">
+                                    <button type="button" class="btn btn-primary d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe3c9</i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe872</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                                <td class="col-8 col-sm-4 col-xxl  d-flex gap-3 gap-lg-5 align-items-center">
+                                    <img id="profile-img"
+                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    <span class="text">Joe Gomez</span>
+                                </td>
+                                <td class="col d-none d-sm-flex justify-content-center text">Male</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">$1500</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">IT Cons</td>
+                                <td class="col d-flex justify-content-center gap-1">
+                                    <button type="button" class="btn btn-primary d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe3c9</i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe872</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                                <td class="col-8 col-sm-4 col-xxl  d-flex gap-3 gap-lg-5 align-items-center">
+                                    <img id="profile-img"
+                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    <span class="text">Joe Gomez</span>
+                                </td>
+                                <td class="col d-none d-sm-flex justify-content-center text">Male</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">$1500</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">IT Cons</td>
+                                <td class="col d-flex justify-content-center gap-1">
+                                    <button type="button" class="btn btn-primary d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe3c9</i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe872</i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                                <td class="col-8 col-sm-4 col-xxl  d-flex gap-3 gap-lg-5 align-items-center">
+                                    <img id="profile-img"
+                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
+                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
+                                    <span class="text">Joe Gomez</span>
+                                </td>
+                                <td class="col d-none d-sm-flex justify-content-center text">Male</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">$1500</td>
+                                <td class="col d-none d-sm-flex justify-content-center text">IT Cons</td>
+                                <td class="col d-flex justify-content-center gap-1">
+                                    <button type="button" class="btn btn-primary d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe3c9</i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger d-flex align-items-center p-md-2 p-1"
+                                        title="print">
+                                        <i class="material-icons">&#xe872</i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="../../assets/scripts/main.js"></script>
+</body>
+
+</html>

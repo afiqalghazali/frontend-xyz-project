@@ -45,8 +45,9 @@ body.dark {
 	transition: var(--tran-05);
 	z-index: 1;
 }
-#sidebar-nav #brand-text,
-#sidebar-nav .text-sidebar {
+#brand-text,
+.text-sidebar,
+.toggle-dropdown {
 	display: none;
 }
 
@@ -84,7 +85,7 @@ body.dark {
 }
 
 /* Selected Menu */
-.sidebar li.active {
+.sidebar li.active a {
 	background-color: var(--primary-color);
 }
 
@@ -102,7 +103,8 @@ body.dark .sidebar li.active a {
 }
 
 #sidebar-nav.maximize #brand-text,
-#sidebar-nav.maximize .text-sidebar {
+#sidebar-nav.maximize .text-sidebar,
+#sidebar-nav.maximize .toggle-dropdown {
 	display: flex;
 }
 
@@ -139,7 +141,7 @@ body.dark .sidebar li.active a {
 	color: var(--secondary-color);
 }
 
-.name {
+.text {
 	color: var(--text-color);
 }
 
@@ -173,11 +175,11 @@ body.dark .card:hover a {
 		min-height: 6 0px;
 	}
 
-	.sidebar li.active {
-		background-color: inherit;
+	.sidebar li.active a {
+		background: none;
+		color: var(--primary-color);
 	}
 
-	.sidebar li.active a,
 	body.dark .sidebar li.active a {
 		color: var(--primary-color);
 	}
