@@ -8,12 +8,12 @@ $(".sidebar ul li").on("click", function () {
 
 /* Toggle Sidebar */
 $(".toggle").on("click", function () {
-	$(".sidebar").toggleClass("maxsimize");
-	$(".toggle").toggleClass("maxsimize-on");
-	if (sessionStorage.getItem("maxsimized")) {
-		sessionStorage.removeItem("maxsimized");
+	$(".sidebar").toggleClass("maximize");
+	$(".toggle").toggleClass("maximize-on");
+	if (sessionStorage.getItem("maximized")) {
+		sessionStorage.removeItem("maximized");
 	} else {
-		sessionStorage.setItem("maxsimized", true);
+		sessionStorage.setItem("maximized", true);
 	}
 });
 
@@ -35,11 +35,11 @@ onload = function () {
 		$("#dark-mode").prop("checked", true).change();
 		sessionStorage.setItem("darkmode", true);
 	}
-	if (sessionStorage.getItem("maxsimized")) {
-		sessionStorage.getItem("maxsimized");
-		$(".sidebar").addClass("maxsimize");
-		$(".toggle").addClass("maxsimize-on");
-		sessionStorage.setItem("maxsimized", true);
+	if (sessionStorage.getItem("maximized")) {
+		sessionStorage.getItem("maximized");
+		$(".sidebar").addClass("maximize");
+		$(".toggle").addClass("maximize-on");
+		sessionStorage.setItem("maximized", true);
 	}
 };
 

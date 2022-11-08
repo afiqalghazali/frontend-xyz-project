@@ -97,22 +97,22 @@ body.dark .sidebar li.active a {
 }
 
 /* Minimize Sidebar */
-#sidebar-nav.maxsimize {
+#sidebar-nav.maximize {
 	width: 285px;
 }
 
-#sidebar-nav.maxsimize #brand-text,
-#sidebar-nav.maxsimize .text-sidebar {
+#sidebar-nav.maximize #brand-text,
+#sidebar-nav.maximize .text-sidebar {
 	display: flex;
 }
 
-#sidebar-nav.maxsimize .toggle-icon {
+#sidebar-nav.maximize .toggle-icon {
 	transform: rotate(-180deg);
 }
 
 /* Topbar */
 #topbar {
-	min-height: 100px;
+	min-height: 80px;
 	background-color: var(--secondary-color);
 	transition: var(--tran-05);
 }
@@ -170,7 +170,7 @@ body.dark .card:hover a {
 /* Media Query */
 @media (max-width: 991px) {
 	#topbar {
-		min-height: 60px;
+		min-height: 6 0px;
 	}
 
 	.sidebar li.active {
@@ -183,7 +183,7 @@ body.dark .card:hover a {
 	}
 
 	#sidebar-nav,
-	#sidebar-nav.maxsimize {
+	#sidebar-nav.maximize {
 		width: 100%;
 		min-height: 40px;
 		max-height: 40px;
