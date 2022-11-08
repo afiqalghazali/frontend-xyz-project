@@ -21,7 +21,6 @@ $(".toggle").on("click", function () {
 
 $("#dark-mode").on("click", function () {
 	$("body").toggleClass("dark");
-	$("#dark-mode").toggleClass("dark-on");
 	if (sessionStorage.getItem("darkmode")) {
 		sessionStorage.removeItem("darkmode");
 	} else {
@@ -33,7 +32,7 @@ onload = function () {
 	if (sessionStorage.getItem("darkmode")) {
 		sessionStorage.getItem("darkmode");
 		$("body").addClass("dark");
-		$("#dark-mode").addClass("dark-on");
+		$("#dark-mode").bootstrapToggle("on");
 		sessionStorage.setItem("darkmode", true);
 	}
 	if (sessionStorage.getItem("minimized")) {
