@@ -102,27 +102,29 @@
                 </div>
             </div>
 
-            <!-- Topbar Profile -->
-            <div class="d-flex align-items-center gap-2">
-                <div class="dark-mode d-flex">
-                    <label class="material-icons-round pe-2" for="dark-mode">&#xe518</label>
-                    <div class="d-flex gap-5 form-check form-switch" for="dark-mode">
+            <!-- Topbar -->
+            <div class="d-flex align-items-center gap-2 gap-lg-3">
+                <!-- Dark Mode -->
+                <div class="dark-mode d-flex align-items-center">
+                    <label class="btn text material-icons-round p-1" for="dark-mode">&#xe518</label>
+                    <div class="d-flex form-check form-switch justify-content-center" for="dark-mode">
                         <input class="form-check-input" type="checkbox" role="switch" title="toggle-dark"
                             id="dark-mode">
                     </div>
-                    <label class="material-icons-round" for="dark-mode">&#xef5e</label>
-
+                    <label class="btn text material-icons-round p-1" for="dark-mode">&#xef5e</label>
                 </div>
+
+                <!-- Dropdown -->
                 <div class="dropdown d-flex">
                     <!-- Toggle Dropdown -->
-                    <button class="btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+                    <button class="btn d-flex align-items-center gap-3" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <img id="profile-img"
                             src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
                             class="rounded-circle bg-light shadow-sm col-2" alt="Avatar" />
                         <span class="d-none d-lg-flex col-10 flex-column align-items-start me-1 ">
                             <span class="fs-6 fw-semibold text">Joe Gomez</span>
-                            <span class="fs-6 text-secondary">CEO</span>
+                            <span class="fs-6 text opacity-75">CEO</span>
                         </span>
                     </button>
 
@@ -163,7 +165,8 @@
                 <div class="d-flex flex-column flex-lg-row col justify-content-between px-1 px-lg-2">
                     <span class="fs-3 fw-bold">Dashboard</span>
                     <ol class="breadcrumb p-lg-2">
-                        <li class="breadcrumb-item"><a class="text-decoration-none" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-decoration-none" href="admin-dashboard.html">Home</a>
+                        </li>
                         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     </ol>
                 </div>
@@ -180,7 +183,7 @@
                             <div class="card rounded-4 shadow border-0 col d-flex p-3 gap-4">
                                 <span class="fs-5 fw-semibold">Employee</span>
                                 <span class="display-5 fw-bold">100</span>
-                                <a href="" class="text-decoration-none fs-6">Go to Employee</a>
+                                <a href="admin-employee.html" class="text-decoration-none fs-6">Go to Employee</a>
                             </div>
                             <div class="card rounded-4 shadow border-0 col d-flex p-3 gap-4">
                                 <span class="fs-5 fw-semibold">Payroll</span>
@@ -228,7 +231,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="" class="text-decoration-none fs-6 p-3 mt-auto">Go to Employee</a>
+                            <a href="admin-employee.html" class="text-decoration-none fs-6 p-3 mt-auto">Go to
+                                Employee</a>
                         </div>
 
                         <!-- Verification -->

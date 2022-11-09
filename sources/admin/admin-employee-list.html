@@ -24,7 +24,7 @@
 
 <body class="d-flex">
     <!-- Content -->
-    <div class="content col d-flex flex-column gap-3 mb-5">
+    <div class="content col d-flex flex-column gap-3 mb-2">
         <!-- Topbar -->
         <nav id="topbar" class="navbar d-flex px-1 px-lg-4 shadow-sm">
             <!-- Topbar Logo & Greetings -->
@@ -38,27 +38,29 @@
                 </div>
             </div>
 
-            <!-- Topbar Profile -->
-            <div class="d-flex align-items-center gap-2">
-                <div class="dark-mode d-flex">
-                    <label class="material-icons-round pe-2" for="dark-mode">&#xe518</label>
-                    <div class="d-flex gap-5 form-check form-switch" for="dark-mode">
+            <!-- Topbar -->
+            <div class="d-flex align-items-center gap-2 gap-lg-3">
+                <!-- Dark Mode -->
+                <div class="dark-mode d-flex align-items-center">
+                    <label class="btn text material-icons-round p-1" for="dark-mode">&#xe518</label>
+                    <div class="d-flex form-check form-switch justify-content-center" for="dark-mode">
                         <input class="form-check-input" type="checkbox" role="switch" title="toggle-dark"
                             id="dark-mode">
                     </div>
-                    <label class="material-icons-round" for="dark-mode">&#xef5e</label>
-
+                    <label class="btn text material-icons-round p-1" for="dark-mode">&#xef5e</label>
                 </div>
+
+                <!-- Dropdown -->
                 <div class="dropdown d-flex">
                     <!-- Toggle Dropdown -->
-                    <button class="btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+                    <button class="btn d-flex align-items-center gap-3" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <img id="profile-img"
                             src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
                             class="rounded-circle bg-light shadow-sm col-2" alt="Avatar" />
                         <span class="d-none d-lg-flex col-10 flex-column align-items-start me-1 ">
                             <span class="fs-6 fw-semibold text">Joe Gomez</span>
-                            <span class="fs-6 text-secondary">CEO</span>
+                            <span class="fs-6 text opacity-75">CEO</span>
                         </span>
                     </button>
 
@@ -106,7 +108,7 @@
                         <li class="breadcrumb-item active" aria-current="page">Employee List</li>
                     </ol>
                 </div>
-                <div class="d-flex px-3">
+                <div class="d-flex px-1 px-lg-2">
                     <a type="button" href="admin-employee.html"
                         class="d-flex rounded-circle p-2 btn btn-primary align-items-center justify-content-center">
                         <i class="material-icons-round">&#xe5c4</i>
@@ -115,16 +117,19 @@
             </div>
 
             <!-- Content Body -->
-            <div class="d-flex row p-2 p-sm-3 px-lg-5 ">
+            <div class="d-flex row p-3 px-lg-5 gap-4 ">
                 <!-- Employee's List -->
                 <div class="container col rounded-4 shadow border-0 d-flex flex-column p-1 p-sm-3">
                     <div class="d-flex align-items-center gap-3 p-3">
-                        <i class="material-icons-round">&#xe8b6</i>
-                        <input type="email" class="form-control" id="search" placeholder="Search">
+                        <form class="d-flex align-items-center gap-2" action="">
+                            <input type="email" class="form-control" id="search" placeholder="Search">
+                            <button type="submit" class="btn btn-primary material-icons-round">&#xe8b6</button>
+                        </form>
                     </div>
                     <table class="table table-borderless">
                         <tbody class="d-flex flex-column gap-2 px-3">
-                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                            <tr
+                                class="d-flex col align-items-center px-1 px-md-3 py-2 bg-verification rounded-2 shadow-sm">
                                 <td class="col-8 col-sm-4 col-xxl d-flex gap-3 gap-lg-5 align-items-center">
                                     <img id="profile-img"
                                         src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
@@ -145,7 +150,8 @@
                                     </button>
                                 </td>
                             </tr>
-                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                            <tr
+                                class="d-flex col align-items-center px-1 px-md-3 py-2 bg-verification rounded-2 shadow-sm">
                                 <td class="col-8 col-sm-4 col-xxl  d-flex gap-3 gap-lg-5 align-items-center">
                                     <img id="profile-img"
                                         src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
@@ -166,7 +172,8 @@
                                     </button>
                                 </td>
                             </tr>
-                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                            <tr
+                                class="d-flex col align-items-center px-1 px-md-3 py-2 bg-verification rounded-2 shadow-sm">
                                 <td class="col-8 col-sm-4 col-xxl  d-flex gap-3 gap-lg-5 align-items-center">
                                     <img id="profile-img"
                                         src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
@@ -187,7 +194,8 @@
                                     </button>
                                 </td>
                             </tr>
-                            <tr class="d-flex col align-items-center px-3 py-2 bg-verification rounded-2 shadow-sm">
+                            <tr
+                                class="d-flex col align-items-center px-1 px-md-3 py-2 bg-verification rounded-2 shadow-sm">
                                 <td class="col-8 col-sm-4 col-xxl  d-flex gap-3 gap-lg-5 align-items-center">
                                     <img id="profile-img"
                                         src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
@@ -211,6 +219,27 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- Pagination -->
+                <nav aria-label="..." class="d-flex justify-content-center">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link d-flex"><i class="material-icons-round">&#xe408</i></a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex" href="#"><i class="material-icons-round">&#xe409</i></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
