@@ -23,18 +23,82 @@
 
 
 <body class="d-flex">
+    <!-- Sidebar -->
+    <nav class="sidebar d-flex flex-lg-column col-auto shadow" id="sidebar-nav">
+        <!-- Sidebar Hedaer -->
+        <div class="header-box p-2 mt-4 mb-5 align-items-center d-none d-md-none d-lg-flex gap-2 position-relative">
+            <!-- Company Logo & Name -->
+            <div class="logo">
+                <img src="../../assets/img/xyz_logo.svg" width="48px" height="48px" alt="">
+            </div>
+            <span id="brand-text" class="fs-4 fw-bold">XYZ Company</span>
+
+            <!-- Button Toggle Maximize Sidebar -->
+            <button
+                class="btn btn-primary toggle p-1 text-white rounded-circle d-none d-md-none d-lg-flex position-absolute">
+                <i class="material-icons-round fs-5 rounded-circle toggle-icon">&#xe5cc</i>
+            </button>
+        </div>
+
+        <!-- Sidebar Body -->
+        <ul id="menu-bar"
+            class="list-unstyled col d-flex flex-row flex-lg-column gap-4 justify-content-center fs-6 p-1 p-lg-2">
+            <li>
+                <a href="admin-dashboard.html" class="text-decoration-none p-1 px-lg-3 py-lg-2 d-flex rounded-3">
+                    <i class="material-icons-round fs-2 menu-icon">&#xe9b0</i>
+                    <div class="align-items-center d-none d-md-none d-lg-flex">
+                        <span class="text-sidebar">Dashboard</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="admin-employee.html" class="text-decoration-none p-1 px-lg-3 py-lg-2 d-flex rounded-3">
+                    <i class="material-icons-round fs-2 menu-icon">&#xea67</i>
+                    <div class="align-items-center d-none d-md-none d-lg-flex">
+                        <span class="text-sidebar">Employee</span>
+                    </div>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#" class="text-decoration-none p-1 px-lg-3 py-lg-2 d-flex rounded-3">
+                    <i class="material-icons-round fs-2 menu-icon">&#xe6b1</i>
+                    <div class="align-items-center d-none d-md-none d-lg-flex">
+                        <span class="text-sidebar">Verification</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="text-decoration-none p-1 px-lg-3 py-lg-2 d-flex rounded-3">
+                    <i class="material-icons-round fs-2 menu-icon">&#xef63</i>
+                    <div class="align-items-center d-none d-md-none d-lg-flex">
+                        <span class="text-sidebar">Payroll</span>
+                    </div>
+                </a>
+            </li>
+            <li class="mt-auto d-none d-md-none d-lg-flex sign-out">
+                <a href="../../index.html" onclick="return confirm('Apakah anda ingin logout')"
+                    class="col text-decoration-none p-1 px-lg-3 py-lg-2 d-flex align-items-center rounded-3">
+                    <i class="material-icons-round fs-2 menu-icon">&#xe9ba</i>
+                    <div class="align-items-center">
+                        <span class="text-sidebar">Sign Out</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <!-- Content -->
-    <div class="content col d-flex flex-column gap-3 mb-2">
+    <div class="content col d-flex flex-column gap-3 mb-5">
         <!-- Topbar -->
         <nav id="topbar" class="navbar d-flex px-1 px-lg-3 shadow-sm">
             <!-- Topbar Logo & Greetings -->
             <div class="d-flex p-2">
                 <!-- Topbar Logo Display md-xs -->
                 <div class="d-flex align-items-center gap-3">
-                    <div class="d-flex">
+                    <div class="d-flex d-lg-none">
                         <img src="../../assets/img/xyz_logo.svg" height="30px" width="30px" alt="">
                     </div>
-                    <span id="brand-text" class="fs-4 fw-bold d-none d-sm-flex text">XYZ Company</span>
+                    <span id="brand-text" class="fs-4 fw-bold d-none d-sm-flex d-lg-none text">XYZ Company</span>
                 </div>
             </div>
 
@@ -58,7 +122,7 @@
                         <img id="profile-img"
                             src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
                             class="rounded-circle bg-light shadow-sm col-2" alt="Avatar" />
-                        <span class="d-none d-lg-flex col flex-column align-items-start me-1 ">
+                        <span class="d-none d-lg-flex flex-column align-items-start me-1 ">
                             <span class="fs-6 fw-semibold text">Roberto Firmino</span>
                             <span class="fs-6 text opacity-75">CEO</span>
                         </span>
@@ -94,34 +158,24 @@
         </nav>
 
         <!-- Main Content -->
-        <div class="d-flex flex-column px-2">
+        <div class="d-flex flex-column gap-4 px-2">
             <!-- Content Header -->
-            <div class="d-flex my-2 mx-0 mx-lg-4 px-1 gap-1">
-                <div class="p-2 d-flex align-items-center">
-                    <div class="">
-                        <a type="button" href="admin-employee.html"
-                            class="d-flex rounded-circle p-1 btn btn-primary align-items-center justify-content-center">
-                            <i class="material-icons-round">&#xe5c4</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex flex-column flex-lg-row col align-items-lg-center justify-content-between p-1">
-                    <span class="fs-3 fw-bold">Employee List</span>
+            <div class="d-flex header my-2 mx-0 mx-lg-4 px-1">
+                <div class="d-flex flex-column flex-lg-row col justify-content-between px-1 px-lg-2">
+                    <h1 class="fw-bold header">Verification</h1>
                     <ol class="breadcrumb p-lg-2">
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="admin-dashboard.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item"><a class="text-decoration-none"
-                                href="admin-employee.html">Employee</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Employee List</li>
+                        <li class="breadcrumb-item active" aria-current="page">Verification</li>
                     </ol>
                 </div>
             </div>
 
             <!-- Content Body -->
-            <div class="d-flex row mx-1 mx-lg-4 gap-4">
-                <!-- Employee's List -->
-                <div class="container col rounded-4 shadow border-0 d-flex flex-column p-2">
-                    <div class="d-flex align-items-center gap-3 p-3">
+            <div class="d-flex  flex-column mx-0 mx-lg-4 px-md-1 gap-3">
+                <!-- Verification List -->
+                <div class="flex-container rounded-4 shadow border-0 p-2">
+                    <div class="d-flex p-3">
                         <form class="d-flex align-items-center gap-2" action="">
                             <input type="email" class="form-control" id="search" placeholder="Search">
                             <button type="submit" class="btn btn-primary material-icons-round">&#xe8b6</button>
@@ -129,41 +183,53 @@
                     </div>
                     <table class="table table-hover">
                         <thead>
-                            <tr class="d-flex col px-2 py-1">
-                                <th class="col-8 col-sm-4 col-xxl d-flex text">Employee Name</th>
-                                <th class="col d-none d-sm-flex justify-content-center align-items-center text">Sex</th>
-                                <th class="col d-none d-sm-flex justify-content-center align-items-center text">Salary
+                            <tr class="d-flex col p-1">
+                                <th class="col-8 col-sm-4 col-md-3 p-1 align-items-center d-flex text">
+                                    Name
                                 </th>
-                                <th class="col d-none d-sm-flex justify-content-center align-items-center text">Position
+                                <th
+                                    class="col col-md-2 d-none d-sm-flex p-1 align-items-center justify-content-center text">
+                                    Kode</th>
+                                <th
+                                    class="col col-md-2 d-none d-sm-flex p-1 align-items-center justify-content-center text">
+                                    Username
                                 </th>
-                                <th class="col d-flex justify-content-center gap-1 text">Action</th>
+                                <th
+                                    class="col col-md-3 d-none d-md-flex p-1 align-items-center justify-content-center text">
+                                    Email
+                                </th>
+                                <th class="col d-flex p-1 align-items-center justify-content-center gap-1 text">Action
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="d-flex col px-2 py-1">
-                                <td class="col-8 col-sm-4 col-xxl d-flex gap-2 align-items-center">
+                            <tr class="d-flex col p-1">
+                                <td class="col-8 col-sm-4 col-md-3 d-flex gap-2 p-1 align-items-center">
                                     <img id="profile-img"
                                         src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
                                         class="rounded-circle bg-light shadow-sm" alt="Avatar" />
                                     <span class="text">Roberto Firmino</span>
                                 </td>
-                                <td class="col d-none d-sm-flex justify-content-center align-items-center text">
-                                    <span class="text">Male</span>
+                                <td
+                                    class="col col-md-2 d-none d-sm-flex p-1 align-items-center justify-content-center text">
+                                    <span class="text">ABC123</span>
                                 </td>
-                                <td class="col d-none d-sm-flex justify-content-center align-items-center text">
-                                    <span class="text">$1500</span>
+                                <td
+                                    class="col col-md-2 d-none d-sm-flex p-1 align-items-center justify-content-center text">
+                                    <span class="text">roberto</span>
                                 </td>
-                                <td class="col d-none d-sm-flex justify-content-center align-items-center text">
-                                    <span class="text">IT Cons</span>
+                                <td
+                                    class="col col-md-3 d-none d-md-flex p-1 align-items-center justify-content-center text">
+                                    <span class="text">roberto@gmail.com</span>
                                 </td>
-                                <td class="col d-flex justify-content-center gap-1">
-                                    <button type="button" class="btn btn-primary d-flex align-items-center p-md-2 p-1"
-                                        title="print">
-                                        <i class="material-icons">&#xe3c9</i>
-                                    </button>
+                                <td class="col d-flex p-1 align-items-center justify-content-center gap-1">
+                                    <a href="verification-page.html" type="button"
+                                        class="btn btn-primary d-flex align-items-center p-md-2 p-1" title="print">
+                                        <i class="material-icons">&#xf0c5</i>
+                                    </a>
                                     <button type="button" class="btn btn-danger d-flex align-items-center p-md-2 p-1"
                                         title="print">
-                                        <i class="material-icons">&#xe872</i>
+                                        <i class="material-icons">&#xe14c</i>
                                     </button>
                                 </td>
                             </tr>
@@ -193,6 +259,8 @@
                 </nav>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
     <!-- Bootstrap JS -->

@@ -129,7 +129,9 @@ body.dark .sidebar li.active a {
 
 /* Main Content */
 .card,
-.container {
+.container,
+.flex-container,
+.text-field {
 	background: var(--secondary-color);
 }
 
@@ -188,6 +190,11 @@ body.dark .card:hover a {
 
 .background {
 	background-color: var(--background-color);
+}
+
+.form-control:focus {
+	background: var(--secondary-color);
+	color: var(--text-color);
 }
 
 #profile-img-container {

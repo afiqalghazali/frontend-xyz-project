@@ -1,14 +1,10 @@
-<!-- @format -->
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
@@ -16,11 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
         rel="stylesheet">
     <link rel="stylesheet" href="../../assets/styles/main.css">
-    <title>XYZ Company</title>
 </head>
-
-<!-- PHP Config -->
-
 
 <body class="d-flex">
     <!-- Content -->
@@ -99,98 +91,64 @@
             <div class="d-flex my-2 mx-0 mx-lg-4 px-1 gap-1">
                 <div class="p-2 d-flex align-items-center">
                     <div class="">
-                        <a type="button" href="admin-employee.html"
+                        <a type="button" href="admin-verification.html"
                             class="d-flex rounded-circle p-1 btn btn-primary align-items-center justify-content-center">
                             <i class="material-icons-round">&#xe5c4</i>
                         </a>
                     </div>
                 </div>
                 <div class="d-flex flex-column flex-lg-row col align-items-lg-center justify-content-between p-1">
-                    <span class="fs-3 fw-bold">Employee List</span>
+                    <span class="fs-3 fw-bold">Confirm Verification</span>
                     <ol class="breadcrumb p-lg-2">
                         <li class="breadcrumb-item"><a class="text-decoration-none" href="admin-dashboard.html">Home</a>
                         </li>
                         <li class="breadcrumb-item"><a class="text-decoration-none"
-                                href="admin-employee.html">Employee</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Employee List</li>
+                                href="admin-verification.html">Verification</a></li>
                     </ol>
                 </div>
             </div>
 
             <!-- Content Body -->
             <div class="d-flex row mx-1 mx-lg-4 gap-4">
-                <!-- Employee's List -->
-                <div class="container col rounded-4 shadow border-0 d-flex flex-column p-2">
-                    <div class="d-flex align-items-center gap-3 p-3">
-                        <form class="d-flex align-items-center gap-2" action="">
-                            <input type="email" class="form-control" id="search" placeholder="Search">
-                            <button type="submit" class="btn btn-primary material-icons-round">&#xe8b6</button>
-                        </form>
-                    </div>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr class="d-flex col px-2 py-1">
-                                <th class="col-8 col-sm-4 col-xxl d-flex text">Employee Name</th>
-                                <th class="col d-none d-sm-flex justify-content-center align-items-center text">Sex</th>
-                                <th class="col d-none d-sm-flex justify-content-center align-items-center text">Salary
-                                </th>
-                                <th class="col d-none d-sm-flex justify-content-center align-items-center text">Position
-                                </th>
-                                <th class="col d-flex justify-content-center gap-1 text">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="d-flex col px-2 py-1">
-                                <td class="col-8 col-sm-4 col-xxl d-flex gap-2 align-items-center">
-                                    <img id="profile-img"
-                                        src="https://cdn.discordapp.com/attachments/1020601540257521674/1037712201202552882/person_filled_FILL0_wght400_GRAD0_opsz48.png"
-                                        class="rounded-circle bg-light shadow-sm" alt="Avatar" />
-                                    <span class="text">Roberto Firmino</span>
-                                </td>
-                                <td class="col d-none d-sm-flex justify-content-center align-items-center text">
-                                    <span class="text">Male</span>
-                                </td>
-                                <td class="col d-none d-sm-flex justify-content-center align-items-center text">
-                                    <span class="text">$1500</span>
-                                </td>
-                                <td class="col d-none d-sm-flex justify-content-center align-items-center text">
-                                    <span class="text">IT Cons</span>
-                                </td>
-                                <td class="col d-flex justify-content-center gap-1">
-                                    <button type="button" class="btn btn-primary d-flex align-items-center p-md-2 p-1"
-                                        title="print">
-                                        <i class="material-icons">&#xe3c9</i>
-                                    </button>
-                                    <button type="button" class="btn btn-danger d-flex align-items-center p-md-2 p-1"
-                                        title="print">
-                                        <i class="material-icons">&#xe872</i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Register Form -->
+                <div>
+                    <form action="../php/form_aksi.php" method="post"
+                        class="form container rounded-3 d-flex flex-column col col-sm-8 col-md-7 col-lg-6 col-xxl-5 p-5 gap-3 text-center"
+                        enctype="multipart/form-data">
+                        <h2 class="fw-bold fs-1">Register Form</h2>
+                        <div class="form-floating">
+                            <input type="text" readonly class="form-control text text-field" name="nama" value="roberto"
+                                title="nama">
+                            <label class="text">Username</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" readonly class="form-control text text-field focus-none" name="email"
+                                value="roberto@gmail.com" title="email">
+                            <label>Email</label>
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select text text-field" id="floatingSelect" aria-label="Jabatan">
+                                <option selected>Pilih Jabatan</option>
+                                <option value="1">Admin</option>
+                                <option value="2">Android Developer</option>
+                                <option value="3">CEO</option>
+                                <option value="4">Data Analyst</option>
+                                <option value="5">HRD</option>
+                                <option value="6">IT Security</option>
+                                <option value="7">Web Developer</option>
+                            </select>
+                            <label for="floatingSelect">Jabatan</label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text text text-field" id="basic-addon1">Rp</span>
+                            <input type="text" class="form-control text text-field" placeholder="Gaji"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="d-flex">
+                            <input type="submit" value="Verifikasi" class="btn btn-primary px-4 py-2 mb-3">
+                        </div>
+                    </form>
                 </div>
-
-                <!-- Pagination -->
-                <nav aria-label="..." class="d-flex justify-content-center mt-auto">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link d-flex"><i class="material-icons-round">&#xe408</i></a>
-                        </li>
-                        <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link d-flex" href="#"><i class="material-icons-round">&#xe409</i></a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
