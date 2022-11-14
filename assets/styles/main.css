@@ -13,17 +13,14 @@
 	--background-color: #f0efff;
 
 	/* ====== TRANSITIONS ======  */
-	--tran-02: all 0.2s ease;
-	--tran-03: all 0.3s ease;
-	--tran-04: all 0.4s ease;
-	--tran-05: all 0.5s ease;
+	--tran-all: all 0.5s ease;
 }
 
 body {
 	font-family: "Poppins", sans-serif;
 	min-height: 100vh;
 	background-color: var(--body-color);
-	transition: var(--tran-05);
+	transition: var(--tran-all);
 }
 
 .sidebar li a,
@@ -44,7 +41,7 @@ body.dark {
 #sidebar-nav {
 	width: 102px;
 	background-color: var(--secondary-color);
-	transition: var(--tran-05);
+	transition: var(--tran-all);
 	z-index: 1;
 }
 #brand-text,
@@ -63,11 +60,11 @@ body.dark {
 
 .toggle {
 	right: -16px;
-	transition: var(--tran-05);
+	transition: var(--tran-all);
 }
 
 .toggle-icon {
-	transition: var(--tran-05);
+	transition: var(--tran-all);
 }
 
 #brand-text,
@@ -118,13 +115,22 @@ body.dark .sidebar li.active a {
 #topbar {
 	min-height: 80px;
 	background-color: var(--secondary-color);
-	transition: var(--tran-05);
+	transition: var(--tran-all);
+}
+
+#profile-img,
+#profile-img-container {
+	object-fit: cover;
 }
 
 #profile-img {
 	width: 46px;
 	height: 46px;
-	object-fit: cover;
+}
+
+#profile-img-container {
+	width: 150px;
+	height: 150px;
 }
 
 /* Main Content */
@@ -133,11 +139,12 @@ body.dark .sidebar li.active a {
 .flex-container,
 .text-field {
 	background: var(--secondary-color);
+	transition: var(--tran-all);
 }
 
 .card:hover {
 	background-color: var(--primary-color);
-	transition: var(--tran-05);
+	transition: var(--tran-all);
 }
 
 .card:hover span,
@@ -197,10 +204,17 @@ body.dark .card:hover a {
 	color: var(--text-color);
 }
 
-#profile-img-container {
-	width: 120px;
-	height: 120px;
-	object-fit: cover;
+.profile-info,
+.profile-info:focus {
+	box-shadow: none;
+	border: none;
+	background: none;
+	padding: 0;
+}
+
+.change-image {
+	bottom: 0;
+	right: 0;
 }
 
 /* Media Query */
