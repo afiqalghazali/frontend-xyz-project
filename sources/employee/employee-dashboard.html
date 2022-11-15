@@ -14,6 +14,10 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <!-- Google Material -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet">
+    <!-- Full Calendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../../assets/styles/main.css">
     <title>XYZ Company</title>
 </head>
@@ -167,7 +171,7 @@
             <!-- Content Body -->
             <div class="d-flex col flex-column flex-xl-row mx-1 mx-lg-4 gap-4 mb-4">
                 <!-- Container One -->
-                <div class="d-flex col col-xl-8 flex-column gap-4">
+                <div class="d-flex col col-xl-9 flex-column gap-4">
                     <!-- Row One -->
                     <div class="d-flex gap-4 flex-column">
                         <div class="d-flex gap-4 flex-column flex-xxl-row">
@@ -192,47 +196,8 @@
 
                     <!-- Row Two -->
                     <div class="flex-container col rounded-4 shadow border-0 d-flex flex-column p-3">
-                        <h3 class="fw-bold p-3 header">Attendance History</h3>
-                        <table class="table table-borderless d-flex flex-column flex-md-row gap-2">
-                            <tbody class="d-flex col flex-column gap-2 px-2">
-                                <tr class="d-flex align-items-center p-1 text">
-                                    <td class="col fw-bold">
-                                        Present
-                                    </td>
-                                    <td class="col d-flex justify-content-center">
-                                        27
-                                    </td>
-                                </tr>
-                                <tr class="d-flex align-items-center p-1 text">
-                                    <td class="col fw-bold">
-                                        Sick
-                                    </td>
-                                    <td class="col d-flex justify-content-center">
-                                        2
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody class="d-flex col flex-column gap-2 px-2 overflow-hidden">
-                                <tr class="d-flex align-items-center p-1 text">
-                                    <td class="col fw-bold">
-                                        Permission
-                                    </td>
-                                    <td class="col d-flex justify-content-center">
-                                        1
-                                    </td>
-                                </tr>
-                                <tr class="d-flex align-items-center p-1 text">
-                                    <td class="col fw-bold">
-                                        Absent
-                                    </td>
-                                    <td class="col d-flex justify-content-center">
-                                        1
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <a href="#" class="text-decoration-none fs-6 p-3 mt-auto">Go to
-                            Attendance</a>
+                        <div id="calendar">
+                        </div>
                     </div>
                 </div>
 
@@ -278,6 +243,10 @@
 
     <!-- JQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Full Calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="../../assets/scripts/calendar.js"></script>
 
     <script src="../../assets/scripts/main.js"></script>
 </body>

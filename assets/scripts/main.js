@@ -63,3 +63,13 @@ $("#save-profile").on("click", function () {
 	$("#edit-profile").toggleClass("d-none d-flex");
 	$("#datepicker").datepicker("remove");
 });
+
+/* Permission */
+$("#permission").on("click", function () {
+	$(".input-file").removeClass("d-none");
+	$(".input-file").addClass("d-flex");
+});
+
+$("#present").on("click", function () {
+	$(".input-file").addClass("d-none");
+});
