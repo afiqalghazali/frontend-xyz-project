@@ -218,6 +218,22 @@ body.dark .card:hover a {
 	right: 0;
 }
 
+.clock {
+	background-color: #0d6efd;
+}
+
+.clock div:nth-child(2) {
+	background-color: #0c49a3;
+}
+
+.clock:nth-child(4) {
+	background-color: #ff3131;
+}
+
+.clock:nth-child(4) div:nth-child(2) {
+	background-color: #b91d1d;
+}
+
 /* Media Query */
 @media (max-width: 991px) {
 	#topbar {

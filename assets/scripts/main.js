@@ -66,10 +66,11 @@ $("#save-profile").on("click", function () {
 
 /* Permission */
 $("#permission").on("click", function () {
-	$(".input-file").removeClass("d-none");
-	$(".input-file").addClass("d-flex");
+	$(".permission").removeClass("d-none");
+	$(".permission").addClass("d-flex");
 });
 
 $("#present").on("click", function () {
-	$(".input-file").addClass("d-none");
+	$(".permission").addClass("d-none");
+	$(".reason").prop("checked", false).change();
 });
