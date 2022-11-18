@@ -13,19 +13,19 @@ setInterval(function () {
 
 	/* Day */
 	if (day === 0) {
-		day = "Senin";
-	} else if (day === 1) {
-		day = "Selasa";
-	} else if (day === 2) {
-		day = "Rabu";
-	} else if (day === 3) {
-		day = "Kamis";
-	} else if (day === 4) {
-		day = "Jumat";
-	} else if (day === 5) {
-		day = "Sabtu";
-	} else if (day === 6) {
 		day = "Minggu";
+	} else if (day === 1) {
+		day = "Senin";
+	} else if (day === 2) {
+		day = "Selasa";
+	} else if (day === 3) {
+		day = "Rabu";
+	} else if (day === 4) {
+		day = "Kamis";
+	} else if (day === 5) {
+		day = "Jumat";
+	} else if (day === 6) {
+		day = "Sabtu";
 	}
 
 	/* Month */

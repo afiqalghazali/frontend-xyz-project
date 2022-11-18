@@ -2,6 +2,7 @@
 
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 /* Variables */
 :root {
@@ -124,8 +125,8 @@ body.dark .sidebar li.active a {
 }
 
 #profile-img {
-	width: 46px;
-	height: 46px;
+	width: 40px;
+	height: 40px;
 }
 
 #profile-img-container {
@@ -233,6 +234,11 @@ body.dark .card:hover a {
 
 .clock:nth-child(4) div:nth-child(2) {
 	background-color: #b91d1d;
+}
+
+/* Angka */
+.numb {
+	font-family: "Lato", sans-serif;
 }
 
 /* Media Query */
