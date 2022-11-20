@@ -93,4 +93,4 @@ setInterval(function () {
 	$("#minutes").text(min);
 	$("#seconds").text(sec);
 	$("#period").text(session);
-}, 100);
+}, 1);
