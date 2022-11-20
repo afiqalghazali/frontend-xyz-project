@@ -148,7 +148,7 @@
                             <hr class="dropdown-divider d-block d-lg-none">
                         </li>
                         <li>
-                            <a class="dropdown-item d-block d-lg-none" href="../../php/logoutController.php"
+                            <a class="dropdown-item d-block d-lg-none" href="../../index.html"
                                 onclick="return confirm('Apakah anda ingin logout')">Sign Out</a>
                         </li>
                     </ul>
@@ -171,21 +171,24 @@
             </div>
 
             <!-- Content Body -->
-            <div class="d-flex  flex-column mx-0 mx-lg-4 px-md-1 gap-3">
+            <div class="d-flex  flex-column mx-0 mx-lg-4 px-2 gap-3">
                 <!-- Payroll List -->
                 <div class="flex-container rounded-4 shadow border-0 p-2">
                     <div class="d-flex flex-column flex-sm-row col p-3 gap-3">
                         <!-- Search Bar -->
                         <div class="d-flex col">
                             <form class="d-flex align-items-center gap-2" action="">
-                                <input type="email" class="form-control" id="search" placeholder="Search">
+                                <input type="email" class="form-control text-field" id="search" placeholder="Search">
                                 <button type="submit" class="btn btn-primary material-icons-round">&#xe8b6</button>
                             </form>
                         </div>
                         <!-- Button Payrol -->
-                        <div class="d-flex gap-2">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Add Bonus</button>
+                        <div class="d-flex gap-1">
+                            <button type="button" class="btn btn-primary d-flex gap-2" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                                <i class="material-icons-round">&#xe850</i>
+                                <span>Add Bonus</span>
+                            </button>
                             <!-- Modal Bonus -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
@@ -218,7 +221,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-success">Run Payroll</button>
+                            <button type="button" class="btn btn-success d-flex gap-2">
+                                <i class="material-icons-round">&#xe1c4</i>
+                                <span>Run Payroll</span>
+                            </button>
                         </div>
                     </div>
                     <table class="table table-hover">

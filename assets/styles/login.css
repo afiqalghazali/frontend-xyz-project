@@ -78,6 +78,22 @@ form.sign-up-form {
 	margin-bottom: 10px;
 }
 
+.test-input {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	color: whitesmoke;
+	background: #4481eb;
+	padding: 16px;
+	width: 300px;
+	border-radius: 55px;
+}
+
+.test-input:nth-of-type(2) {
+	margin-top: 20px;
+	background: rgb(254, 4, 108);
+}
+
 .input-field {
 	max-width: 380px;
 	width: 100%;
