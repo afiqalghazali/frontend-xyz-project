@@ -24,4 +24,4 @@ setInterval(function () {
 		},
 	});
 	calendar.render();
-}, 1);
+}, 100);
