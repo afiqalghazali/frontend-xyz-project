@@ -27,7 +27,6 @@ $(".toggle").on("click", function () {
 });
 
 /* Toggle Dark Mode */
-
 $("#dark-mode").on("click", function () {
 	$("body").toggleClass("dark");
 	if (localStorage.getItem("darkmode")) {

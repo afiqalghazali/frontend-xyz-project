@@ -71,7 +71,7 @@ body.dark {
 #brand-text,
 .text-sidebar {
 	white-space: nowrap;
-	animation: fadeIn 2s;
+	animation: fadeIn 1s;
 }
 
 /* Text Transition */
