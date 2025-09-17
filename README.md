@@ -2,7 +2,7 @@
 
 A modern and responsive web front-end application for managing employee data and payrolls.
 
-🔗 Live Demo: https://afiqalghazali.github.io/xyz-project/
+🔗 Live Demo: https://afiqalghazali.github.io/frontend-xyz-project/
 
 ## ⚒️ Usage
 
@@ -12,7 +12,7 @@ A modern and responsive web front-end application for managing employee data and
 git clone https://github.com/afiqalghazali/xyz-project.git
 ```
 
-2. Open `index.html` in your browser or visit the [Live Demo](https://afiqalghazali.github.io/xyz-project/)
+2. Open `index.html` in your browser or visit the [Live Demo](https://afiqalghazali.github.io/frontend-xyz-project/)
 
 ## 🤖 Tech Stack
 
