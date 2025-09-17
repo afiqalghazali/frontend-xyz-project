@@ -1,8 +1,11 @@
 # Frontend XYZ Project
 
+![App Thumbnail](https://github.com/user-attachments/assets/fedbbd20-d6bc-4914-82c2-40954aa44b5e)
+
 A modern and responsive web front-end application for managing employee data and payrolls.
 
 🔗 Live Demo: https://afiqalghazali.github.io/frontend-xyz-project/
+
 
 ## ⚒️ Usage
 
