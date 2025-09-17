@@ -6,7 +6,6 @@ A modern and responsive web front-end application for managing employee data and
 
 🔗 Live Demo: https://afiqalghazali.github.io/frontend-xyz-project/
 
-
 ## ⚒️ Usage
 
 1. Clone this repository:
